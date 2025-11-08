@@ -1,13 +1,20 @@
 /* ===== AJUSTE RESPONSIVO HEADER ===== */
 @media (max-width: 768px) {
 
-  .header-superior {
+.header-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 15px;
-    position: relative;
-  }
+    padding: 0 20px;
+}
 
   /* Ícone do menu hambúrguer */
   .menu-hamburguer {
@@ -32,11 +39,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 30px
   }
 
-  .logo-img {
-    max-height: 30px;
-  }
 
   .search-bar-container {
     flex: 1;
@@ -71,20 +76,16 @@
   .icones-header-direita {
     display: flex;
     align-items: center;
+    gap: 1px;
     justify-content: flex-end;
-    gap: 10px;
     order: 3;
+    margin-left: 10px;
   }
 
   .icone-link i {
     font-size: 22px;
   }
 
-  /* Ajuste geral */
-  .header-fixo {
-    height: auto;
-    padding-bottom: 10px;
-  }
 
   .pagina-container {
     padding-top: 130px;

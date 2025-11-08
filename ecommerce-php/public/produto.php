@@ -72,11 +72,8 @@ if (isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho'])) {
     <link rel="stylesheet" href="../assets/css/header.css?v=<?php echo get_css_version('../assets/css/header.css'); ?>">
     <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo get_css_version('../assets/css/style.css'); ?>">
     <link rel="stylesheet" href="../assets/css/produto.css?v=<?php echo get_css_version('../assets/css/produto.css'); ?>">
-    <link rel="stylesheet"
-        href="../assets/css/menu-lateral.css?v=<?php echo get_css_version('../assets/css/menu-lateral.css'); ?>">
+    <link rel="stylesheet" href="../assets/css/menu-lateral.css?v=<?php echo get_css_version('../assets/css/menu-lateral.css'); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
 
 <body>
@@ -96,23 +93,22 @@ if (isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho'])) {
             <!-- Ícones à direita -->
             <div class="icones-header-direita">
                 <div class="icone-texto-container perfil-menu-container">
-                    <a href="<?php echo $usuario_logado ? 'public/perfil.php' : 'public/login_registro.php'; ?>"
-                        class="icone-link" id="perfil-link">
+                    <a href="<?php echo $usuario_logado ? '../public/perfil.php' : '../public/login_registro.php'; ?>" class="icone-link" id="perfil-link">
                         <i class='bx bx-user'></i>
                     </a>
 
                     <?php if ($usuario_logado): ?>
                         <div class="perfil-dropdown" id="perfil-dropdown">
-                            <a href="public/perfil.php">Gerenciar Perfil</a>
+                            <a href="../public/perfil.php">Gerenciar Perfil</a>
                             <?php if ($usuario_is_admin): ?>
-                                <a href="admin/painel.php">Painel Admin</a>
+                                <a href="../admin/painel.php">Painel Admin</a>
                             <?php endif; ?>
-                            <a href="public/logout.php" class="logout-btn">Sair</a>
+                            <a href="../public/logout.php" class="logout-btn">Sair</a>
                         </div>
                     <?php endif; ?>
                 </div>
 
-                <a href="public/carrinho.php" class="icone-link sacola-link">
+                <a href="../public/carrinho.php" class="icone-link sacola-link">
                     <i class='bx bx-shopping-bag'></i>
                     <?php if ($total_itens_carrinho > 0): ?>
                         <span class="cart-notification"><?php echo $total_itens_carrinho; ?></span>
@@ -141,10 +137,10 @@ if (isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho'])) {
                 </div>
 
                 <ul class="menu-links">
-                    <li><a href="index.php">Início</a></li>
+                    <li><a href="../index.php">Início</a></li>
                     <li><a href="#">Categorias</a></li>
                     <li><a href="#">Promoções</a></li>
-                    <li><a href="public/contato.php">Contato</a></li>
+                    <li><a href="../public/contato.php">Contato</a></li>
                 </ul>
             </div>
         </nav>
@@ -157,8 +153,7 @@ if (isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho'])) {
     <main class="produto-detalhe-container">
         <div class="produto-detalhe">
             <div class="imagem-produto">
-                <img src="../assets/images/produtos/<?php echo $produto['imagem']; ?>"
-                    alt="<?php echo htmlspecialchars($produto['nome']); ?>">
+                <img src="../assets/images/produtos/<?php echo $produto['imagem']; ?>" alt="<?php echo htmlspecialchars($produto['nome']); ?>">
             </div>
 
             <div class="info-produto">
@@ -180,8 +175,7 @@ if (isset($_SESSION['carrinho']) && is_array($_SESSION['carrinho'])) {
                 <div class="lista-relacionados">
                     <?php foreach ($relacionados as $item): ?>
                         <div class="produto-relacionado" onclick="abrirProduto(<?php echo $item['id']; ?>)">
-                            <img src="../assets/images/produtos/<?php echo $item['imagem']; ?>"
-                                alt="<?php echo htmlspecialchars($item['nome']); ?>">
+                            <img src="../assets/images/produtos/<?php echo $item['imagem']; ?>" alt="<?php echo htmlspecialchars($item['nome']); ?>">
                             <h3><?php echo htmlspecialchars($item['nome']); ?></h3>
                             <span class="preco">R$ <?php echo number_format($item['preco'], 2, ',', '.'); ?></span>
                         </div>

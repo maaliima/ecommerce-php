@@ -1,0 +1,290 @@
+/* ===============================
+   ESTILO PADRÃO ESTRUTURAL
+   =============================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+   background-color: white;
+  line-height: 1.6;
+}
+
+.carrinho-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+header {
+    background-color: white;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2em;
+  color: black;
+  margin-left: 40px;
+}
+
+.voltar {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.voltar img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.voltar img:hover {
+  transform: scale(1.1);
+}
+
+/* Perfil do usuário */
+.perfil-admin {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil-admin img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.perfil-admin span {
+  font-size: 0.9em;
+  color: #000;
+}
+
+/* ===============================
+   CONTEÚDO PRINCIPAL
+   =============================== */
+main {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 30px auto;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem-vazio {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  padding: 40px 0;
+}
+
+/* ===============================
+   TABELA DE PRODUTOS
+   =============================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* Formulário de quantidade */
+.form-quantidade input[type="number"] {
+  width: 70px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+/* ===============================
+   TOTAL E BOTÕES
+   =============================== */
+.total {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 25px;
+  text-align: right;
+  color: #000;
+}
+
+.whatsapp-btn {
+  display: block;
+  margin: 30px auto 0 auto;
+  background-color: #25d366;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5b;
+}
+
+/* ===============================
+   MODAL
+   =============================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 60px;
+}
+
+.modal-content-custom {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 25px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.modal-content-custom h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #23232e;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Campos do formulário */
+.modal-content-custom form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content-custom label {
+  font-weight: bold;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.modal-content-custom input,
+.modal-content-custom select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5b;
+}
+
+/* ===============================
+   RESPONSIVIDADE
+   =============================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .perfil-admin {
+    position: static;
+    margin-top: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  table th, table td {
+    font-size: 0.9em;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+  }
+}

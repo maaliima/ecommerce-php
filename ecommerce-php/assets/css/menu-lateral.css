@@ -27,10 +27,9 @@ header {
 }
 
 .logo-img {
-  width: 70px;
-  height: auto;
+    width: 33px;
+    height: auto;
 }
-
 .sacola-icon a:hover {
   background-color: pink;
   position: relative;

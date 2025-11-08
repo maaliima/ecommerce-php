@@ -34,6 +34,7 @@ a {
     justify-content: space-between; 
     padding: 10px 5%; 
     width: 100%;
+    margin-left: -22px;
 }
 
 .logo {
@@ -59,6 +60,7 @@ a {
     overflow: hidden;
     height: 45px;
     flex-shrink: 0;
+    margin-left: -20px;
 }
 
 .search-input {
@@ -89,8 +91,10 @@ a {
 .icones-header-direita {
     display: flex;
     align-items: center;
-    gap: 15px; 
+    gap: 1px; 
     flex-shrink: 0;
+    flex-wrap: nowrap;
+    margin-right: -10px;
 }
 
 .icone-texto-container {
