@@ -377,3 +377,132 @@
     height: 150px;
   }
 }
+
+.produto-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 0 0 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.produto-voltar:hover {
+  background-color: #fdf2f8;
+  border-color: #f9a8d4;
+  color: #be1a77;
+}
+
+@media (max-width: 768px) {
+  .produto-voltar {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+}
+
+/* ==============================
+   AJUSTE FINAL DE CONSISTÃŠNCIA
+   ============================== */
+
+.produto-detalhe-container {
+  max-width: 1180px;
+  margin: 130px auto 40px;
+  gap: 28px;
+}
+
+.produto-detalhe {
+  padding: 20px;
+  gap: 10px;
+}
+
+.imagem-produto {
+  padding: 10px;
+}
+
+.imagem-produto img {
+  max-width: 420px;
+}
+
+.info-produto {
+  padding: 12px 18px;
+}
+
+.lista-relacionados {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.produto-relacionado {
+  width: 100%;
+  max-width: 260px;
+  padding: 18px 14px;
+  border-radius: 16px;
+}
+
+.produto-relacionado img {
+  width: 100%;
+  max-width: 170px;
+  height: 140px;
+  margin: 0 auto 10px;
+  transform: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .produto-detalhe-container {
+    margin-top: 118px;
+    gap: 20px;
+  }
+
+  .produto-detalhe {
+    padding: 14px;
+  }
+
+  .info-produto h1 {
+    font-size: 1.6rem;
+  }
+
+  .info-produto .preco {
+    font-size: 1.35rem;
+  }
+
+  .lista-relacionados {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .produto-relacionado {
+    max-width: none;
+    padding: 14px 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .produto-detalhe-container {
+    margin-top: 110px;
+    padding: 0 12px;
+  }
+
+  .info-produto {
+    padding: 8px 2px;
+    text-align: left;
+  }
+
+  .btn-adicionar-sacola {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .lista-relacionados {
+    grid-template-columns: 1fr;
+  }
+}
