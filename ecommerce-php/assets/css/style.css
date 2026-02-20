@@ -30,11 +30,11 @@ a {
 
 .header-superior {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 10px 5%; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
     width: 100%;
-    margin-left: -22px;
+    gap: 14px;
 }
 
 .logo {
@@ -49,18 +49,25 @@ a {
     width: auto;
 }
 
+.menu-hamburguer {
+    display: none;
+}
+
 .search-bar-container {
     display: flex;
     align-items: center;
-    flex-grow: 1; 
-    margin: 0 auto; 
-    max-width: 400px; 
+    flex: 1 1 auto;
+    margin: 0 20px 0 10px;
+    max-width: 520px;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
     overflow: hidden;
     height: 45px;
     flex-shrink: 0;
-    margin-left: -20px;
+}
+
+.desktop-search {
+    display: flex;
 }
 
 .search-input {
@@ -91,10 +98,11 @@ a {
 .icones-header-direita {
     display: flex;
     align-items: center;
-    gap: 1px; 
+    gap: 10px;
     flex-shrink: 0;
     flex-wrap: nowrap;
-    margin-right: -10px;
+    margin-right: 0;
+    padding-left: 4px;
 }
 
 .icone-texto-container {
@@ -294,6 +302,7 @@ a {
     background-color: #be1a77;
     color: #fff;
     border: none;
+    display: inline-block;
     padding: 10px 20px;
     font-weight: 600;
     font-size: 12px;
@@ -301,6 +310,7 @@ a {
     transition: background-color 0.3s ease;
     width: 100%;
     text-align: center;
+    text-decoration: none;
     margin-top: 8px;
 }
 
@@ -356,4 +366,58 @@ a {
 .perfil-menu-container a,
 .sacola-link {
   pointer-events: all !important;
+}
+
+@media (max-width: 1100px) {
+  .search-bar-container {
+    max-width: 340px;
+    margin-right: 14px;
+  }
+
+  .icones-header-direita {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagina-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .catalogo {
+    padding: 0 0 24px;
+  }
+
+  .conteudo-produto {
+    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .produto {
+    width: 100%;
+    max-width: none;
+  }
+
+  .produto h3 {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .btn-adicionar-sacola {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .conteudo-produto {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .produto img {
+    max-height: 260px;
+    object-fit: cover;
+  }
 }

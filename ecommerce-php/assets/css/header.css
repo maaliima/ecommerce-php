@@ -1,7 +1,7 @@
-/* ===== AJUSTE RESPONSIVO HEADER ===== */
+﻿/* ===== AJUSTE RESPONSIVO HEADER ===== */
 @media (max-width: 768px) {
 
-.header-fixo {
+  .header-fixo {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,11 +12,19 @@
     height: 90px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
+    justify-content: center;
+    padding: 0 12px;
+  }
 
-  /* Ícone do menu hambúrguer */
+  .header-superior {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    padding: 0;
+  }
+
   .menu-hamburguer {
     display: block;
     cursor: pointer;
@@ -25,67 +33,34 @@
     order: 1;
   }
 
-  /* Logo + barra de pesquisa no centro */
-  .logo-search-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    order: 2;
-    gap: 8px;
-  }
-
   .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 30px
+    width: auto;
+    max-height: 30px;
+    margin: 0 auto;
+    order: 2;
   }
 
-
-  .search-bar-container {
-    flex: 1;
-    max-width: 180px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: #fff;
+  .desktop-search {
+    display: none !important;
   }
 
-  .search-bar-container input {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .search-bar-container button {
-    background: none;
-    border: none;
-    padding: 8px;
-    font-size: 18px;
-    color: #CE2870;
-    cursor: pointer;
-  }
-
-  /* Ícones de perfil e carrinho no canto direito */
   .icones-header-direita {
-    display: flex;
+    display: flex !important;
     align-items: center;
-    gap: 1px;
+    gap: 8px;
     justify-content: flex-end;
     order: 3;
-    margin-left: 10px;
+    margin-left: 0;
+    padding-left: 0;
+    min-width: 66px;
   }
 
   .icone-link i {
     font-size: 22px;
   }
-
 
   .pagina-container {
     padding-top: 130px;

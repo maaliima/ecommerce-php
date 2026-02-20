@@ -1,15 +1,5 @@
-/* ===============================
-   ESTILO PADRÃO ESTRUTURAL
-   =============================== */
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +7,10 @@
 }
 
 body {
-  font-family: "Open Sans", Arial, sans-serif;
-   background-color: white;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
   line-height: 1.6;
+  color: #222;
 }
 
 .carrinho-container {
@@ -28,12 +19,8 @@ body {
   margin: 0 auto;
 }
 
-/* ===============================
-   HEADER
-   =============================== */
 header {
-    background-color: white;
-  color: white;
+  background-color: #fff;
   padding: 20px;
   text-align: center;
   position: relative;
@@ -44,8 +31,8 @@ header {
 
 header h1 {
   font-size: 2em;
-  color: black;
-  margin-left: 40px;
+  color: #111;
+  margin: 0;
 }
 
 .voltar {
@@ -57,14 +44,13 @@ header h1 {
 .voltar img {
   width: 28px;
   height: 28px;
-  transition: transform 0.3s;
+  transition: transform 0.2s ease;
 }
 
 .voltar img:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
-/* Perfil do usuário */
 .perfil-admin {
   position: absolute;
   right: 20px;
@@ -72,71 +58,77 @@ header h1 {
   display: flex;
   align-items: center;
   gap: 10px;
+  max-width: 40%;
 }
 
 .perfil-admin img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid #fff;
+  flex-shrink: 0;
 }
 
 .perfil-admin span {
   font-size: 0.9em;
   color: #000;
+  text-align: right;
 }
 
-/* ===============================
-   CONTEÚDO PRINCIPAL
-   =============================== */
 main {
   background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  margin: 30px auto;
-  width: 90%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  border-radius: 10px;
+  margin: 24px auto;
+  width: calc(100% - 40px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .mensagem-vazio {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #666;
-  padding: 40px 0;
+  padding: 32px 0;
 }
 
-/* ===============================
-   TABELA DE PRODUTOS
-   =============================== */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
+  min-width: 620px;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
-th, td {
+th,
+td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
   text-align: center;
+  vertical-align: middle;
 }
 
 th {
-  background-color: #f4f4f4;
-  font-weight: bold;
+  background-color: #f7f7f7;
+  font-weight: 600;
   color: #333;
 }
 
-td a {
+td a,
+td button.btn-link {
   color: #007bff;
   text-decoration: none;
 }
 
-td a:hover {
+td a:hover,
+td button.btn-link:hover {
   text-decoration: underline;
 }
 
-/* Formulário de quantidade */
-.form-quantidade input[type="number"] {
+.form-quantidade input[type='number'] {
   width: 70px;
   text-align: center;
   border: 1px solid #ccc;
@@ -144,38 +136,32 @@ td a:hover {
   padding: 5px;
 }
 
-/* ===============================
-   TOTAL E BOTÕES
-   =============================== */
 .total {
-  font-weight: bold;
-  font-size: 1.3em;
-  margin-top: 25px;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin-top: 22px;
   text-align: right;
   color: #000;
 }
 
 .whatsapp-btn {
   display: block;
-  margin: 30px auto 0 auto;
+  margin: 28px auto 0;
   background-color: #25d366;
   border: none;
-  color: white;
-  padding: 12px 25px;
-  font-size: 1.1em;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-weight: 700;
+  transition: background-color 0.2s;
 }
 
 .whatsapp-btn:hover {
   background-color: #1ebe5b;
 }
 
-/* ===============================
-   MODAL
-   =============================== */
 .modal {
   display: none;
   position: fixed;
@@ -186,39 +172,46 @@ td a:hover {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.6);
-  padding-top: 60px;
+  padding: 20px 12px;
 }
 
 .modal-content-custom {
   background-color: #fff;
-  margin: 5% auto;
-  padding: 25px;
-  border-radius: 8px;
-  width: 90%;
+  margin: 40px auto;
+  padding: 22px;
+  border-radius: 10px;
+  width: 100%;
   max-width: 500px;
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.25s ease-in-out;
 }
 
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-10px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .modal-content-custom h3 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: #23232e;
 }
 
 .close {
   color: #aaa;
   position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
+  top: 10px;
+  right: 14px;
+  font-size: 26px;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -226,16 +219,15 @@ td a:hover {
   color: #000;
 }
 
-/* Campos do formulário */
 .modal-content-custom form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .modal-content-custom label {
-  font-weight: bold;
-  font-size: 0.95em;
+  font-weight: 600;
+  font-size: 0.92em;
   color: #333;
 }
 
@@ -243,48 +235,170 @@ td a:hover {
 .modal-content-custom select {
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1em;
+  border-radius: 6px;
+  font-size: 0.98em;
 }
 
 .btn-whatsapp {
   background-color: #25d366;
-  color: white;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
   padding: 10px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 6px;
 }
 
 .btn-whatsapp:hover {
   background-color: #1ebe5b;
 }
 
-/* ===============================
-   RESPONSIVIDADE
-   =============================== */
+@media (max-width: 992px) {
+  .perfil-admin {
+    max-width: 44%;
+  }
+
+  header h1 {
+    font-size: 1.7em;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    padding: 15px;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 14px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  .voltar {
+    position: static;
+    align-self: flex-start;
   }
 
   .perfil-admin {
     position: static;
-    margin-top: 10px;
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .perfil-admin span {
+    text-align: center;
   }
 
   main {
-    padding: 20px;
+    width: calc(100% - 20px);
+    padding: 16px;
+    margin: 14px auto;
   }
 
-  table th, table td {
-    font-size: 0.9em;
+  .total {
+    text-align: left;
+    font-size: 1.15em;
   }
 
   .whatsapp-btn {
     width: 100%;
+    font-size: 0.98em;
+    padding: 12px 16px;
+  }
+
+  .modal-content-custom {
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  .table-wrapper {
+    overflow: visible;
+  }
+
+  table {
+    min-width: 0;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  table tr {
+    display: block;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: #fff;
+  }
+
+  table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    text-align: right;
+    border-bottom: 1px dashed #eee;
+    padding: 10px 0;
+  }
+
+  table td:last-child {
+    border-bottom: none;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #374151;
+    text-align: left;
+  }
+
+  .form-quantidade {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  header h1 {
+    font-size: 1.3em;
+  }
+
+  .form-quantidade input[type='number'] {
+    width: 58px;
+  }
+
+  .modal-content-custom h3 {
+    font-size: 1.05rem;
+    padding-right: 16px;
+  }
+
+  table tr {
+    padding: 9px 10px;
+  }
+
+  table td {
+    padding: 8px 0;
+    font-size: 0.92rem;
+  }
+
+  .total {
+    font-size: 1.05rem;
+  }
+
+  .whatsapp-btn {
+    font-size: 0.92rem;
   }
 }
